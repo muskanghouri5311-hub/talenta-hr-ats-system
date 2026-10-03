@@ -3,19 +3,32 @@
 .env.*
 !.env.example
 
+# Dependencies
+node_modules/
+
 # Build files
 dist/
 build/
 
 # Logs
 *.log
-
-# OS files
-.DS_Store
-Thumbs.db
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
 
 # Uploaded candidate files
 uploads/
 
 # Private/backup files
 backup_changes.txt
+backup/
+*.backup
+*.bak
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE settings
+.vscode/
+.idea/
