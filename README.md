@@ -1,33 +1,52 @@
 # Talenta – HR & Applicant Tracking System
 
-Talenta is a full-stack HR and Applicant Tracking System (ATS) designed to help HR teams manage job requisitions, candidates, applications, interviews, recruitment workflows, and reports from one platform.
+Talenta is a full-stack Human Resources and Applicant Tracking System (ATS) designed to help HR teams manage recruitment from job requisitions to candidate selection.
 
-## Features
+The system provides role-based access, candidate management, ATS ranking, recruitment pipelines, interviews, offer management, dashboards, audit logs, and a career portal in one platform.
 
-- User authentication and role-based access control
+## ✨ Features
+
+- User authentication and secure login
+- Role-based access control (RBAC)
 - Job requisition management
-- Candidate and application management
-- ATS-based candidate scoring
+- Candidate management
+- Application management
+- ATS-based candidate ranking
+- Candidate pipeline tracking
 - Interview scheduling and management
 - Interview feedback
 - Offer letter management
 - HR dashboards and analytics
-- Reports and recruitment insights
+- Recruitment reports and insights
 - Career portal for job applications
-- Protected routes and secure API access
-- Resume/CV file upload
+- Resume/CV upload
 - Email notifications
+- Audit log for tracking system activities
+- Protected routes and secure API access
 
-## Tech Stack
+## 👥 User Roles
+
+Talenta supports multiple user roles with different permissions:
+
+- **Super Admin** – System administration and overall access
+- **Recruiter** – Recruitment and candidate management
+- **HR Manager** – HR operations and recruitment oversight
+- **Interviewer** – Interview and candidate evaluation
+
+Permissions are controlled based on the user's role and responsibilities.
+
+## 🛠️ Tech Stack
 
 ### Frontend
 
 - React.js
-- Vite
 - React Router
+- Vite
 - Axios
 - Tailwind CSS
 - React Hook Form
+- React Icons / Lucide
+- Sonner / React Hot Toast
 
 ### Backend
 
@@ -40,22 +59,50 @@ Talenta is a full-stack HR and Applicant Tracking System (ATS) designed to help 
 - Multer
 - Nodemailer
 
-### Other Technologies
+### Additional Technologies
 
 - Cloudinary
 - REST APIs
 - Role-Based Access Control
+- Secure API middleware
+- File upload handling
+- Email integration
 
-## User Roles
+## 📸 Screenshots
 
-- Super Admin
-- Recruiter
-- HR Manager
-- Interviewer
+### Login
 
-Each role has different permissions based on the recruitment workflow.
+![Login](./screenshots/login.png)
 
-## Project Structure
+### Dashboard
+
+![Dashboard](./screenshots/dashboard.png)
+
+### Job Requisitions
+
+![Job Requisitions](./screenshots/job-requisitions.png)
+
+### ATS Ranking
+
+![ATS Ranking](./screenshots/ats-ranking.png)
+
+### Candidate Pipeline
+
+![Candidate Pipeline](./screenshots/candidate-pipeline.png)
+
+### Roles & Permissions
+
+![Roles & Permissions](./screenshots/roles-and-permissions.png)
+
+### Audit Log
+
+![Audit Log](./screenshots/audit-log.png)
+
+### Career Portal
+
+![Career Portal](./screenshots/career-portal.png)
+
+## 📁 Project Structure
 
 ```text
 talenta-hr-ats-system/
@@ -74,13 +121,13 @@ talenta-hr-ats-system/
 │   └── ...
 │
 ├── screenshots/
+│   ├── login.png
 │   ├── dashboard.png
+│   ├── job-requisitions.png
 │   ├── ats-ranking.png
 │   ├── candidate-pipeline.png
-│   ├── job-requisitions.png
-│   ├── career-portal.png
 │   ├── roles-and-permissions.png
 │   ├── audit-log.png
-│   └── login.png
+│   └── career-portal.png
 │
 └── README.md
