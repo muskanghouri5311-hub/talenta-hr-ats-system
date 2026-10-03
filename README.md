@@ -21,6 +21,7 @@ Talenta is a full-stack HR and Applicant Tracking System (ATS) designed to help 
 ## Tech Stack
 
 ### Frontend
+
 - React.js
 - Vite
 - React Router
@@ -29,6 +30,7 @@ Talenta is a full-stack HR and Applicant Tracking System (ATS) designed to help 
 - React Hook Form
 
 ### Backend
+
 - Node.js
 - Express.js
 - MongoDB
@@ -39,6 +41,7 @@ Talenta is a full-stack HR and Applicant Tracking System (ATS) designed to help 
 - Nodemailer
 
 ### Other Technologies
+
 - Cloudinary
 - REST APIs
 - Role-Based Access Control
@@ -69,5 +72,15 @@ talenta-hr-ats-system/
 │   ├── pages/
 │   ├── components/
 │   └── ...
+│
+├── screenshots/
+│   ├── dashboard.png
+│   ├── ats-ranking.png
+│   ├── candidate-pipeline.png
+│   ├── job-requisitions.png
+│   ├── career-portal.png
+│   ├── roles-and-permissions.png
+│   ├── audit-log.png
+│   └── login.png
 │
 └── README.md
