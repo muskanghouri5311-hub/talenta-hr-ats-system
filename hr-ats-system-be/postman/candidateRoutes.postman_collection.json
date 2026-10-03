@@ -1,0 +1,226 @@
+{
+  "info": {
+    "name": "HR ATS Candidate Routes",
+    "_postman_id": "8f3d8e4a-24df-4e96-9c3a-1fb8d5d1a1f4",
+    "description": "Postman collection for candidate-related API endpoints in HR ATS backend.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Apply Now",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{jwt_token}}"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/candidates/apply",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "candidates",
+            "apply"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Jane Doe\",\n  \"email\": \"jane.doe@example.com\",\n  \"phone\": \"+1234567890\",\n  \"role\": \"Software Engineer\",\n  \"requisitionId\": \"<requisitionId>\",\n  \"experience\": \"5 years\",\n  \"skills\": [\"JavaScript\", \"Node.js\"],\n  \"tags\": [\"frontend\", \"backend\"],\n  \"resumeUrl\": \"https://example.com/resume.pdf\",\n  \"score\": 85\n}"
+        },
+        "description": "Submit a candidate application."
+      }
+    },
+    {
+      "name": "Get All Candidates",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{jwt_token}}"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/candidates",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "candidates"
+          ]
+        },
+        "description": "Fetch all candidates."
+      }
+    },
+    {
+      "name": "Get Candidate by ID",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{jwt_token}}"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/candidates/{{candidateId}}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "candidates",
+            "{{candidateId}}"
+          ]
+        },
+        "description": "Fetch a single candidate by ID."
+      }
+    },
+    {
+      "name": "Reject Candidate",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{jwt_token}}"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/candidates/{{candidateId}}/reject",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "candidates",
+            "{{candidateId}}",
+            "reject"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{}"
+        },
+        "description": "Mark a candidate as rejected."
+      }
+    },
+    {
+      "name": "Move Candidate Stage",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{jwt_token}}"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/candidates/{{candidateId}}/stage",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "candidates",
+            "{{candidateId}}",
+            "stage"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"stage\": \"Interview\"\n}"
+        },
+        "description": "Update the candidate pipeline stage."
+      }
+    },
+    {
+      "name": "Add Candidate Note",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{jwt_token}}"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/candidates/{{candidateId}}/notes",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "candidates",
+            "{{candidateId}}",
+            "notes"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"author\": \"Recruiter\",\n  \"text\": \"Candidate seemed very strong in technical skills.\"\n}"
+        },
+        "description": "Add a note to the candidate record."
+      }
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": []
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": []
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "jwt_token",
+      "value": ""
+    },
+    {
+      "key": "candidateId",
+      "value": ""
+    }
+  ]
+}
