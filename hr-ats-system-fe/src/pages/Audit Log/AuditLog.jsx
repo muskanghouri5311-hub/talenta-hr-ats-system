@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
-import { getAuditLogs, exportAuditLogs } from "../../lib/api/auditlogApi";
+import { getAuditLogs, exportAuditLogs } from "../../lib/api/auditLogApi";
 
 function AuditLog() {
   const [auditLogs, setAuditLogs] = useState([]);
